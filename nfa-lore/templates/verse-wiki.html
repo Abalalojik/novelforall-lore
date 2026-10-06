@@ -1,0 +1,26 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
+	<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+	<!-- wp:term-description /-->
+	<!-- wp:search {"label":"Search the wiki","showLabel":false,"placeholder":"Search the wiki…","buttonText":"Search","query":{"post_type":"nfa_lore"}} /-->
+
+	<!-- wp:query {"queryId":1,"query":{"inherit":true},"className":"nfa-lore-index"} -->
+	<div class="wp-block-query nfa-lore-index">
+		<!-- wp:post-template -->
+			<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"medium"} /-->
+			<!-- wp:post-excerpt {"moreText":""} /-->
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>No entries yet.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

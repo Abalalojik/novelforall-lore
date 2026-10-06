@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nfa-lore/spoiler",
+	"title": "Spoiler",
+	"category": "text",
+	"icon": "hidden",
+	"description": "Content hidden from readers until the chosen chapter is published.",
+	"keywords": [ "spoiler", "hidden", "lore" ],
+	"textdomain": "nfa-lore",
+	"attributes": {
+		"chapter": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css"
+}

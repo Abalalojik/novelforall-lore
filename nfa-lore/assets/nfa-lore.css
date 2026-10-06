@@ -1,0 +1,63 @@
+/* Glossary tooltips: a discreet dotted underline, definition on hover or focus (tap on mobile). */
+.nfa-term {
+	position: relative;
+	text-decoration: underline dotted;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+	cursor: help;
+}
+
+.nfa-term__tip {
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% + 0.5em);
+	z-index: 20;
+	width: max-content;
+	max-width: min(20rem, 80vw);
+	padding: 0.5em 0.75em;
+	border-radius: 4px;
+	background: var(--wp--preset--color--contrast, #1e1e1e);
+	color: var(--wp--preset--color--base, #fff);
+	font-size: 0.85rem;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.4;
+	text-align: left;
+	text-decoration: none;
+	white-space: normal;
+	transform: translateX(-50%);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.15s ease;
+}
+
+.nfa-term:hover .nfa-term__tip,
+.nfa-term:focus .nfa-term__tip,
+.nfa-term:focus-within .nfa-term__tip {
+	opacity: 1;
+	visibility: visible;
+}
+
+.nfa-term:focus {
+	outline: 1px dotted currentColor;
+	outline-offset: 2px;
+}
+
+/* Only editors ever see these two. */
+.nfa-wikilink-missing {
+	color: #b32d2e;
+	text-decoration: underline wavy #b32d2e;
+	text-decoration-thickness: 1px;
+}
+
+.nfa-spoiler-preview {
+	border: 1px dashed currentColor;
+	border-radius: 4px;
+	padding: 0.5em 1em;
+}
+
+.nfa-spoiler-preview__notice {
+	font-size: 0.8em;
+	opacity: 0.7;
+}
