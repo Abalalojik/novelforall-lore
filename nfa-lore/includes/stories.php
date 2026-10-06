@@ -371,10 +371,14 @@ add_action( 'edited_' . NFA_STORY_TAX, 'nfa_story_save_term_fields' );
 
 /* ---------------------------------------------------------------------------------------------
  * Spoilers: an arc or tome with no published chapter does not exist for readers (its name alone
- * could spoil). Its page redirects to the story; the REST API hides it.
+ * could spoil). Its page redirects to the story; the REST API hides it. A story itself is always public.
  * ------------------------------------------------------------------------------------------- */
 
 function nfa_story_term_is_public( $term ) {
+	$term = get_term( $term, NFA_STORY_TAX );
+	if ( $term && ! is_wp_error( $term ) && 0 === (int) $term->parent ) {
+		return true; // A story itself is never a spoiler; only its unreleased arcs and tomes are.
+	}
 	$tree = nfa_story_tree( $term );
 	return $tree && nfa_story_node_has_chapters( $tree );
 }

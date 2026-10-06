@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Novel For All Lore
  * Description:       Novel For All: story structure (story, arcs, tomes, chapters) with continuous chapter navigation and contents, plus a world wiki with [[wiki links]], glossary tooltips, and spoiler control tied to published chapters.
- * Version:           0.2.0
+ * Version:           0.2.1
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Djenny Floro
@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'NFA_LORE_VERSION', '0.2.0' );
+define( 'NFA_LORE_VERSION', '0.2.1' );
 define( 'NFA_LORE_FILE', __FILE__ );
 define( 'NFA_LORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'NFA_LORE_URL', plugin_dir_url( __FILE__ ) );
