@@ -66,7 +66,7 @@ add_action(
  * Longest names first, so "Double Crown" wins over "Crown".
  */
 function nfa_lore_terms_for_post( $post ) {
-	$verses = NFA_LORE_TYPE === $post->post_type ? array( nfa_lore_entry_verse_slug( $post ) ) : nfa_lore_post_verse_slugs( $post );
+	$verses = NFA_LORE_TYPE === $post->post_type ? array( nfa_lore_entry_verse_slug( $post ) ) : nfa_story_post_verse_slugs( $post );
 	if ( ! $verses ) {
 		return array();
 	}

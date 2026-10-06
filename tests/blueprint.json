@@ -1,9 +1,22 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wiki/the-intern/",
-	"preferredVersions": { "php": "8.3", "wp": "latest" },
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
 	"steps": [
-		{ "step": "activatePlugin", "pluginPath": "nfa-lore/nfa-lore.php" },
-		{ "step": "runPHP", "code": "<?php require '/wordpress/wp-content/nfa-tests/seed.php';" }
+		{
+			"step": "activatePlugin",
+			"pluginPath": "nfa-lore/nfa-lore.php"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-content/nfa-tests/seed.php';"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; flush_rewrite_rules();"
+		}
 	]
 }

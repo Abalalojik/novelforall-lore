@@ -28,6 +28,14 @@ add_action(
 				'content'     => nfa_lore_template_file( 'verse-wiki.html' ),
 			)
 		);
+		register_block_template(
+			'nfa-lore//taxonomy-' . NFA_STORY_TAX,
+			array(
+				'title'       => __( 'Story, Arc or Tome', 'nfa-lore' ),
+				'description' => __( 'A story page (or one of its arcs or tomes): summary and contents.', 'nfa-lore' ),
+				'content'     => nfa_lore_template_file( 'story.html' ),
+			)
+		);
 	}
 );
 

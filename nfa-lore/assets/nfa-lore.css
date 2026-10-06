@@ -61,3 +61,59 @@
 	font-size: 0.8em;
 	opacity: 0.7;
 }
+
+/* Story blocks */
+.nfa-chapter-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 0.75em 1.5em;
+	padding-top: 1em;
+	border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+}
+
+.nfa-chapter-nav__prev,
+.nfa-chapter-nav__next {
+	flex: 1 1 0;
+	min-width: 8em;
+}
+
+.nfa-chapter-nav__next {
+	text-align: right;
+}
+
+.nfa-chapter-nav__contents {
+	flex: 0 0 auto;
+	text-align: center;
+}
+
+.nfa-story-breadcrumb {
+	font-size: 0.85em;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	opacity: 0.75;
+}
+
+.nfa-story-contents__chapters {
+	list-style: none;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.nfa-story-contents__chapters li {
+	padding: 0.6em 0;
+	border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.nfa-story-contents__heading--depth-2 {
+	font-size: 0.9em;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.nfa-block-placeholder {
+	opacity: 0.6;
+	font-style: italic;
+}
